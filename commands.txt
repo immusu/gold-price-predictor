@@ -1,0 +1,7 @@
+pip3 install -r requirements_gold_price.txt
+
+# Train Holt–Winters models
+python3 gold_price_predictor.py --train --csv output_filled.csv --test-size 0.2
+
+# Forecast for a specific date
+python3 gold_price_predictor.py --predict 2025-03-07 --csv output_filled.csv
